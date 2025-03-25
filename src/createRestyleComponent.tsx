@@ -2,8 +2,8 @@ import React from 'react';
 import {View} from 'react-native';
 
 import composeRestyleFunctions from './composeRestyleFunctions';
-import {BaseTheme, RestyleFunctionContainer} from './types';
 import useRestyle from './hooks/useRestyle';
+import {BaseTheme, RestyleFunctionContainer} from './types';
 
 const createRestyleComponent = <
   Props extends {[key: string]: any},
