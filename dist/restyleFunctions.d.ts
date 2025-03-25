@@ -298,21 +298,7 @@ export declare const textShadow: ({
         [key: string]: any;
     }, BaseTheme, RNStyleProperty>;
 })[];
-export declare const all: ({
-    property: "backgroundColor";
-    themeKey: "colors" | undefined;
-    variant: boolean;
-    func: import("./types").RestyleFunction<{
-        [key: string]: any;
-    }, BaseTheme, RNStyleProperty>;
-} | {
-    property: "bg";
-    themeKey: "colors" | undefined;
-    variant: boolean;
-    func: import("./types").RestyleFunction<{
-        [key: string]: any;
-    }, BaseTheme, "backgroundColor" | "bg">;
-} | ({
+export declare const all: (({
     property: "color";
     themeKey: "colors" | undefined;
     variant: boolean;
@@ -334,6 +320,13 @@ export declare const all: ({
         [key: string]: any;
     }, BaseTheme, RNStyleProperty>;
 } | {
+    property: "fontFamily" | "fontSize" | "fontStyle" | "fontWeight" | "letterSpacing" | "lineHeight" | "textAlign" | "textDecorationLine" | "textDecorationStyle" | "textTransform" | "fontVariant" | "writingDirection" | "textAlignVertical" | "verticalAlign" | "includeFontPadding";
+    themeKey: undefined;
+    variant: boolean;
+    func: import("./types").RestyleFunction<{
+        [key: string]: any;
+    }, BaseTheme, RNStyleProperty>;
+} | {
     property: "rowGap" | "gap" | "columnGap" | "margin" | "marginBottom" | "marginEnd" | "marginHorizontal" | "marginLeft" | "marginRight" | "marginStart" | "marginTop" | "marginVertical" | "padding" | "paddingBottom" | "paddingEnd" | "paddingHorizontal" | "paddingLeft" | "paddingRight" | "paddingStart" | "paddingTop" | "paddingVertical";
     themeKey: "spacing" | undefined;
     variant: boolean;
@@ -348,12 +341,40 @@ export declare const all: ({
         [key: string]: any;
     }, BaseTheme, "backfaceVisibility" | "backgroundColor" | "borderBlockColor" | "borderBlockEndColor" | "borderBlockStartColor" | "borderBottomColor" | "borderBottomEndRadius" | "borderBottomLeftRadius" | "borderBottomRightRadius" | "borderBottomStartRadius" | "borderColor" | "borderCurve" | "borderEndColor" | "borderEndEndRadius" | "borderEndStartRadius" | "borderLeftColor" | "borderRadius" | "borderRightColor" | "borderStartColor" | "borderStartEndRadius" | "borderStartStartRadius" | "borderStyle" | "borderTopColor" | "borderTopEndRadius" | "borderTopLeftRadius" | "borderTopRightRadius" | "borderTopStartRadius" | "opacity" | "elevation" | "pointerEvents" | "alignContent" | "alignItems" | "alignSelf" | "aspectRatio" | "borderBottomWidth" | "borderEndWidth" | "borderLeftWidth" | "borderRightWidth" | "borderStartWidth" | "borderTopWidth" | "borderWidth" | "bottom" | "display" | "end" | "flex" | "flexBasis" | "flexDirection" | "rowGap" | "gap" | "columnGap" | "flexGrow" | "flexShrink" | "flexWrap" | "height" | "justifyContent" | "left" | "margin" | "marginBottom" | "marginEnd" | "marginHorizontal" | "marginLeft" | "marginRight" | "marginStart" | "marginTop" | "marginVertical" | "maxHeight" | "maxWidth" | "minHeight" | "minWidth" | "overflow" | "padding" | "paddingBottom" | "paddingEnd" | "paddingHorizontal" | "paddingLeft" | "paddingRight" | "paddingStart" | "paddingTop" | "paddingVertical" | "position" | "right" | "start" | "top" | "width" | "zIndex" | "direction" | "shadowColor" | "shadowOffset" | "shadowOpacity" | "shadowRadius" | "transform" | "transformMatrix" | "rotation" | "scaleX" | "scaleY" | "translateX" | "translateY" | "color" | "fontFamily" | "fontSize" | "fontStyle" | "fontWeight" | "letterSpacing" | "lineHeight" | "textAlign" | "textDecorationLine" | "textDecorationStyle" | "textDecorationColor" | "textShadowColor" | "textShadowOffset" | "textShadowRadius" | "textTransform" | "testID" | "fontVariant" | "writingDirection" | "textAlignVertical" | "verticalAlign" | "includeFontPadding" | "resizeMode" | "overlayColor" | "tintColor" | "objectFit" | "m" | "mt" | "mr" | "mb" | "ml" | "mx" | "my" | "ms" | "me" | "p" | "pt" | "pr" | "pb" | "pl" | "px" | "py" | "ps" | "pe" | "g" | "rg" | "cg">;
 } | {
-    property: "fontFamily" | "fontSize" | "fontStyle" | "fontWeight" | "letterSpacing" | "lineHeight" | "textAlign" | "textDecorationLine" | "textDecorationStyle" | "textTransform" | "fontVariant" | "writingDirection" | "textAlignVertical" | "verticalAlign" | "includeFontPadding";
+    property: "textShadowOffset" | "textShadowRadius";
     themeKey: undefined;
     variant: boolean;
     func: import("./types").RestyleFunction<{
         [key: string]: any;
     }, BaseTheme, RNStyleProperty>;
+} | {
+    property: "textShadowColor";
+    themeKey: "colors" | undefined;
+    variant: boolean;
+    func: import("./types").RestyleFunction<{
+        [key: string]: any;
+    }, BaseTheme, RNStyleProperty>;
+} | {
+    property: "alignContent" | "alignItems" | "alignSelf" | "aspectRatio" | "flex" | "flexBasis" | "flexDirection" | "flexGrow" | "flexShrink" | "flexWrap" | "justifyContent" | "overflow";
+    themeKey: undefined;
+    variant: boolean;
+    func: import("./types").RestyleFunction<{
+        [key: string]: any;
+    }, BaseTheme, RNStyleProperty>;
+} | {
+    property: "backgroundColor";
+    themeKey: "colors" | undefined;
+    variant: boolean;
+    func: import("./types").RestyleFunction<{
+        [key: string]: any;
+    }, BaseTheme, RNStyleProperty>;
+} | {
+    property: "bg";
+    themeKey: "colors" | undefined;
+    variant: boolean;
+    func: import("./types").RestyleFunction<{
+        [key: string]: any;
+    }, BaseTheme, "backgroundColor" | "bg">;
 } | {
     property: "borderBottomWidth" | "borderEndWidth" | "borderLeftWidth" | "borderRightWidth" | "borderStartWidth" | "borderTopWidth" | "borderWidth" | "maxWidth" | "minWidth" | "width";
     themeKey: undefined;
@@ -363,13 +384,6 @@ export declare const all: ({
     }, BaseTheme, RNStyleProperty>;
 } | {
     property: "height" | "maxHeight" | "minHeight";
-    themeKey: undefined;
-    variant: boolean;
-    func: import("./types").RestyleFunction<{
-        [key: string]: any;
-    }, BaseTheme, RNStyleProperty>;
-} | {
-    property: "alignContent" | "alignItems" | "alignSelf" | "aspectRatio" | "flex" | "flexBasis" | "flexDirection" | "flexGrow" | "flexShrink" | "flexWrap" | "justifyContent" | "overflow";
     themeKey: undefined;
     variant: boolean;
     func: import("./types").RestyleFunction<{
@@ -419,20 +433,6 @@ export declare const all: ({
     }, BaseTheme, RNStyleProperty>;
 } | {
     property: "shadowColor";
-    themeKey: "colors" | undefined;
-    variant: boolean;
-    func: import("./types").RestyleFunction<{
-        [key: string]: any;
-    }, BaseTheme, RNStyleProperty>;
-} | {
-    property: "textShadowOffset" | "textShadowRadius";
-    themeKey: undefined;
-    variant: boolean;
-    func: import("./types").RestyleFunction<{
-        [key: string]: any;
-    }, BaseTheme, RNStyleProperty>;
-} | {
-    property: "textShadowColor";
     themeKey: "colors" | undefined;
     variant: boolean;
     func: import("./types").RestyleFunction<{

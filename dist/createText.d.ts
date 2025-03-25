@@ -33,26 +33,26 @@ export declare const textRestyleFunctions: (({
         [key: string]: any;
     }, BaseTheme, "display" | "visible">;
 } | {
-    property: "fontFamily" | "fontSize" | "fontStyle" | "fontWeight" | "lineHeight" | "includeFontPadding" | "fontVariant" | "letterSpacing" | "textAlign" | "textAlignVertical" | "textDecorationLine" | "textDecorationStyle" | "textTransform" | "verticalAlign" | "writingDirection";
+    property: "fontFamily" | "fontSize" | "fontStyle" | "fontWeight" | "letterSpacing" | "lineHeight" | "textAlign" | "textDecorationLine" | "textDecorationStyle" | "textTransform" | "fontVariant" | "writingDirection" | "textAlignVertical" | "verticalAlign" | "includeFontPadding";
     themeKey: undefined;
     variant: boolean;
     func: import("./types").RestyleFunction<{
         [key: string]: any;
     }, BaseTheme, import("./types").RNStyleProperty>;
 }[] | {
-    property: "margin" | "marginTop" | "marginRight" | "marginBottom" | "marginLeft" | "marginHorizontal" | "marginVertical" | "marginStart" | "marginEnd" | "padding" | "paddingTop" | "paddingRight" | "paddingBottom" | "paddingLeft" | "paddingHorizontal" | "paddingVertical" | "paddingStart" | "paddingEnd" | "columnGap" | "rowGap" | "gap";
+    property: "rowGap" | "gap" | "columnGap" | "margin" | "marginBottom" | "marginEnd" | "marginHorizontal" | "marginLeft" | "marginRight" | "marginStart" | "marginTop" | "marginVertical" | "padding" | "paddingBottom" | "paddingEnd" | "paddingHorizontal" | "paddingLeft" | "paddingRight" | "paddingStart" | "paddingTop" | "paddingVertical";
     themeKey: "spacing" | undefined;
     variant: boolean;
     func: import("./types").RestyleFunction<{
         [key: string]: any;
     }, BaseTheme, import("./types").RNStyleProperty>;
 }[] | {
-    property: "p" | "g" | "m" | "mt" | "mr" | "mb" | "ml" | "mx" | "my" | "ms" | "me" | "pt" | "pr" | "pb" | "pl" | "px" | "py" | "ps" | "pe" | "rg" | "cg";
+    property: "m" | "mt" | "mr" | "mb" | "ml" | "mx" | "my" | "ms" | "me" | "p" | "pt" | "pr" | "pb" | "pl" | "px" | "py" | "ps" | "pe" | "g" | "rg" | "cg";
     themeKey: "spacing" | undefined;
     variant: boolean;
     func: import("./types").RestyleFunction<{
         [key: string]: any;
-    }, BaseTheme, "pointerEvents" | "testID" | "p" | "g" | "margin" | "marginTop" | "marginRight" | "marginBottom" | "marginLeft" | "marginHorizontal" | "marginVertical" | "marginStart" | "marginEnd" | "padding" | "paddingTop" | "paddingRight" | "paddingBottom" | "paddingLeft" | "paddingHorizontal" | "paddingVertical" | "paddingStart" | "paddingEnd" | "columnGap" | "rowGap" | "gap" | "m" | "mt" | "mr" | "mb" | "ml" | "mx" | "my" | "ms" | "me" | "pt" | "pr" | "pb" | "pl" | "px" | "py" | "ps" | "pe" | "rg" | "cg" | "fontFamily" | "fontSize" | "fontStyle" | "fontWeight" | "lineHeight" | "includeFontPadding" | "fontVariant" | "letterSpacing" | "textAlign" | "textAlignVertical" | "textDecorationLine" | "textDecorationStyle" | "textTransform" | "verticalAlign" | "writingDirection" | "overflow" | "aspectRatio" | "alignContent" | "alignItems" | "alignSelf" | "justifyContent" | "flex" | "flexBasis" | "flexDirection" | "flexGrow" | "flexShrink" | "flexWrap" | "width" | "minWidth" | "maxWidth" | "borderBottomWidth" | "borderLeftWidth" | "borderRightWidth" | "borderStartWidth" | "borderTopWidth" | "borderEndWidth" | "borderWidth" | "height" | "minHeight" | "maxHeight" | "position" | "top" | "right" | "bottom" | "left" | "start" | "end" | "borderStyle" | "borderColor" | "borderTopColor" | "borderRightColor" | "borderLeftColor" | "borderBottomColor" | "borderStartColor" | "borderEndColor" | "borderRadius" | "borderBottomLeftRadius" | "borderBottomRightRadius" | "borderTopLeftRadius" | "borderTopRightRadius" | "borderBottomStartRadius" | "borderBottomEndRadius" | "borderTopStartRadius" | "borderTopEndRadius" | "shadowOpacity" | "shadowOffset" | "shadowRadius" | "elevation" | "textShadowOffset" | "textShadowRadius" | "backgroundColor" | "color" | "textDecorationColor" | "opacity" | "zIndex" | "shadowColor" | "textShadowColor" | "backfaceVisibility" | "borderBlockColor" | "borderBlockEndColor" | "borderBlockStartColor" | "borderCurve" | "borderEndEndRadius" | "borderEndStartRadius" | "borderStartEndRadius" | "borderStartStartRadius" | "display" | "direction" | "transform" | "transformMatrix" | "rotation" | "scaleX" | "scaleY" | "translateX" | "translateY" | "resizeMode" | "overlayColor" | "tintColor" | "objectFit">;
+    }, BaseTheme, "backfaceVisibility" | "backgroundColor" | "borderBlockColor" | "borderBlockEndColor" | "borderBlockStartColor" | "borderBottomColor" | "borderBottomEndRadius" | "borderBottomLeftRadius" | "borderBottomRightRadius" | "borderBottomStartRadius" | "borderColor" | "borderCurve" | "borderEndColor" | "borderEndEndRadius" | "borderEndStartRadius" | "borderLeftColor" | "borderRadius" | "borderRightColor" | "borderStartColor" | "borderStartEndRadius" | "borderStartStartRadius" | "borderStyle" | "borderTopColor" | "borderTopEndRadius" | "borderTopLeftRadius" | "borderTopRightRadius" | "borderTopStartRadius" | "opacity" | "elevation" | "pointerEvents" | "alignContent" | "alignItems" | "alignSelf" | "aspectRatio" | "borderBottomWidth" | "borderEndWidth" | "borderLeftWidth" | "borderRightWidth" | "borderStartWidth" | "borderTopWidth" | "borderWidth" | "bottom" | "display" | "end" | "flex" | "flexBasis" | "flexDirection" | "rowGap" | "gap" | "columnGap" | "flexGrow" | "flexShrink" | "flexWrap" | "height" | "justifyContent" | "left" | "margin" | "marginBottom" | "marginEnd" | "marginHorizontal" | "marginLeft" | "marginRight" | "marginStart" | "marginTop" | "marginVertical" | "maxHeight" | "maxWidth" | "minHeight" | "minWidth" | "overflow" | "padding" | "paddingBottom" | "paddingEnd" | "paddingHorizontal" | "paddingLeft" | "paddingRight" | "paddingStart" | "paddingTop" | "paddingVertical" | "position" | "right" | "start" | "top" | "width" | "zIndex" | "direction" | "shadowColor" | "shadowOffset" | "shadowOpacity" | "shadowRadius" | "transform" | "transformMatrix" | "rotation" | "scaleX" | "scaleY" | "translateX" | "translateY" | "color" | "fontFamily" | "fontSize" | "fontStyle" | "fontWeight" | "letterSpacing" | "lineHeight" | "textAlign" | "textDecorationLine" | "textDecorationStyle" | "textDecorationColor" | "textShadowColor" | "textShadowOffset" | "textShadowRadius" | "textTransform" | "testID" | "fontVariant" | "writingDirection" | "textAlignVertical" | "verticalAlign" | "includeFontPadding" | "resizeMode" | "overlayColor" | "tintColor" | "objectFit" | "m" | "mt" | "mr" | "mb" | "ml" | "mx" | "my" | "ms" | "me" | "p" | "pt" | "pr" | "pb" | "pl" | "px" | "py" | "ps" | "pe" | "g" | "rg" | "cg">;
 }[] | ({
     property: "textShadowOffset" | "textShadowRadius";
     themeKey: undefined;
@@ -68,7 +68,7 @@ export declare const textRestyleFunctions: (({
         [key: string]: any;
     }, BaseTheme, import("./types").RNStyleProperty>;
 })[] | {
-    property: "overflow" | "aspectRatio" | "alignContent" | "alignItems" | "alignSelf" | "justifyContent" | "flex" | "flexBasis" | "flexDirection" | "flexGrow" | "flexShrink" | "flexWrap";
+    property: "alignContent" | "alignItems" | "alignSelf" | "aspectRatio" | "flex" | "flexBasis" | "flexDirection" | "flexGrow" | "flexShrink" | "flexWrap" | "justifyContent" | "overflow";
     themeKey: undefined;
     variant: boolean;
     func: import("./types").RestyleFunction<{

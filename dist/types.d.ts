@@ -1,4 +1,4 @@
-import { ImageStyle, TextStyle, ViewStyle, StyleProp } from 'react-native';
+import { ImageStyle, TextStyle, ViewStyle, StyleProp, FlexStyle } from 'react-native';
 export interface ResponsiveBaseTheme extends BaseTheme {
     breakpoints: {
         [key: string]: Breakpoint;
@@ -25,6 +25,27 @@ export interface KnownBaseTheme {
     spacing: {
         [key: string]: number | string;
     };
+    typography?: {
+        [key: string]: TextStyle;
+    };
+    layout?: {
+        [key: string]: FlexStyle;
+    };
+    widths?: {
+        [key: string]: number | string;
+    };
+    heights?: {
+        [key: string]: number | string;
+    };
+    borders?: {
+        [key: string]: ViewStyle;
+    };
+    shadows?: {
+        [key: string]: ViewStyle;
+    };
+    textShadows?: {
+        [key: string]: TextStyle;
+    };
     breakpoints?: {
         [key: string]: Breakpoint;
     };
@@ -33,6 +54,10 @@ export interface KnownBaseTheme {
     };
     borderRadii?: {
         [key: string]: number;
+    };
+    textVariants?: {
+        [key: string]: TextStyle;
+        defaults: TextStyle;
     };
 }
 export interface BaseTheme extends KnownBaseTheme {
