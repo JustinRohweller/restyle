@@ -344,14 +344,14 @@ export type SpacingShorthandProps<Theme extends BaseTheme> = {
 
 export type TypographyProps<Theme extends BaseTheme> = {
   [Key in keyof typeof typographyProperties]?: ResponsiveValue<
-    TextStyle[Key],
+    Theme['typography'] extends object ? keyof Theme['typography'] : TextStyle[Key],
     Theme['breakpoints']
   >;
 };
 
 export type LayoutProps<Theme extends BaseTheme> = {
   [Key in keyof typeof layoutProperties]?: ResponsiveValue<
-    FlexStyle[Key],
+    Theme['layout'] extends object ? keyof Theme['layout'] : FlexStyle[Key],
     Theme['breakpoints']
   >;
 };
@@ -372,7 +372,7 @@ export type HeightProps<Theme extends BaseTheme> = {
 
 export type PositionProps<Theme extends BaseTheme> = {
   [Key in keyof typeof positionProperties]?: ResponsiveValue<
-    FlexStyle[Key],
+    Theme['layout'] extends object ? keyof Theme['layout'] : FlexStyle[Key],
     Theme['breakpoints']
   >;
 } & {
@@ -384,7 +384,7 @@ export type PositionProps<Theme extends BaseTheme> = {
 
 export type BorderProps<Theme extends BaseTheme> = {
   [Key in keyof typeof borderProperties]?: ResponsiveValue<
-    ViewStyle[Key],
+    Theme['borders'] extends object ? keyof Theme['borders'] : ViewStyle[Key],
     Theme['breakpoints']
   >;
 } & {
@@ -401,7 +401,7 @@ export type BorderProps<Theme extends BaseTheme> = {
 
 export type ShadowProps<Theme extends BaseTheme> = {
   [Key in keyof typeof shadowProperties]?: ResponsiveValue<
-    ViewStyle[Key],
+    Theme['shadows'] extends object ? keyof Theme['shadows'] : ViewStyle[Key],
     Theme['breakpoints']
   >;
 } & {
@@ -410,7 +410,7 @@ export type ShadowProps<Theme extends BaseTheme> = {
 
 export type TextShadowProps<Theme extends BaseTheme> = {
   [Key in keyof typeof textShadowProperties]?: ResponsiveValue<
-    TextStyle[Key],
+    Theme['textShadows'] extends object ? keyof Theme['textShadows'] : TextStyle[Key],
     Theme['breakpoints']
   >;
 } & {
