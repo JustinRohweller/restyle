@@ -1,8 +1,8 @@
-import {TextStyle, FlexStyle, ViewStyle} from 'react-native';
+import { TextStyle, FlexStyle, ViewStyle } from 'react-native';
 
 import createRestyleFunction from './createRestyleFunction';
-import {BaseTheme, ResponsiveValue, RNStyleProperty} from './types';
-import {getKeys} from './typeHelpers';
+import { BaseTheme, ResponsiveValue, RNStyleProperty } from './types';
+import { getKeys } from './typeHelpers';
 
 const spacingProperties = {
   margin: true,
@@ -57,10 +57,10 @@ const typographyProperties = {
   fontSize: true,
   fontStyle: true,
   fontWeight: true,
+  lineHeight: true,
   includeFontPadding: true,
   fontVariant: true,
   letterSpacing: true,
-  lineHeight: true,
   textAlign: true,
   textAlignVertical: true,
   textDecorationLine: true,
@@ -70,13 +70,26 @@ const typographyProperties = {
   writingDirection: true,
 };
 
-const layoutProperties = {
-  width: true,
+const heightProperties = {
   height: true,
-  minWidth: true,
-  maxWidth: true,
   minHeight: true,
   maxHeight: true,
+};
+
+const widthProperties = {
+  width: true,
+  minWidth: true,
+  maxWidth: true,
+  borderBottomWidth: true,
+  borderLeftWidth: true,
+  borderRightWidth: true,
+  borderStartWidth: true,
+  borderTopWidth: true,
+  borderEndWidth: true,
+  borderWidth: true,
+};
+
+const layoutProperties = {
   overflow: true,
   aspectRatio: true,
   alignContent: true,
@@ -102,14 +115,7 @@ const positionProperties = {
 };
 
 const borderProperties = {
-  borderBottomWidth: true,
-  borderLeftWidth: true,
-  borderRightWidth: true,
   borderStyle: true,
-  borderTopWidth: true,
-  borderStartWidth: true,
-  borderEndWidth: true,
-  borderWidth: true,
 };
 
 const borderRadiusProperties = {
@@ -205,6 +211,18 @@ export const typography = getKeys(typographyProperties).map(property => {
   });
 });
 
+export const width = getKeys(widthProperties).map(property => {
+  return createRestyleFunction({
+    property,
+  });
+});
+
+export const height = getKeys(heightProperties).map(property => {
+  return createRestyleFunction({
+    property,
+  });
+});
+
 export const layout = getKeys(layoutProperties).map(property => {
   return createRestyleFunction({
     property,
@@ -275,6 +293,8 @@ export const all = [
   ...spacing,
   ...spacingShorthand,
   ...typography,
+  ...width,
+  ...height,
   ...layout,
   ...position,
   ...border,
@@ -332,6 +352,20 @@ export type TypographyProps<Theme extends BaseTheme> = {
 export type LayoutProps<Theme extends BaseTheme> = {
   [Key in keyof typeof layoutProperties]?: ResponsiveValue<
     FlexStyle[Key],
+    Theme['breakpoints']
+  >;
+};
+
+export type WidthProps<Theme extends BaseTheme> = {
+  [Key in keyof typeof widthProperties]?: ResponsiveValue<
+    keyof Theme['widths'],
+    Theme['breakpoints']
+  >;
+};
+
+export type HeightProps<Theme extends BaseTheme> = {
+  [Key in keyof typeof heightProperties]?: ResponsiveValue<
+    keyof Theme['heights'],
     Theme['breakpoints']
   >;
 };
@@ -394,6 +428,8 @@ export type AllProps<Theme extends BaseTheme> = BackgroundColorProps<Theme> &
   SpacingShorthandProps<Theme> &
   TypographyProps<Theme> &
   LayoutProps<Theme> &
+  WidthProps<Theme> &
+  HeightProps<Theme> &
   PositionProps<Theme> &
   BorderProps<Theme> &
   ShadowProps<Theme> &
