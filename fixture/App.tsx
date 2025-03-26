@@ -1,15 +1,16 @@
+/* eslint-disable prettier/prettier */
 import React, {useState} from 'react';
 import {SafeAreaView, Switch} from 'react-native';
 
 import type {VariantProps} from './restyle';
 import {
-  ThemeProvider,
   createBox,
-  createText,
   createRestyleComponent,
+  createText,
   createVariant,
+  ThemeProvider,
 } from './restyle';
-import {theme, darkTheme, Theme} from './theme';
+import {darkTheme, theme, Theme} from './theme';
 
 const Box = createBox<Theme>();
 const Text = createText<Theme>();

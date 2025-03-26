@@ -1,8 +1,9 @@
-import { TextStyle, FlexStyle, ViewStyle } from 'react-native';
+/* eslint-disable prettier/prettier */
+import {TextStyle, FlexStyle, ViewStyle} from 'react-native';
 
 import createRestyleFunction from './createRestyleFunction';
-import { BaseTheme, ResponsiveValue, RNStyleProperty } from './types';
-import { getKeys } from './typeHelpers';
+import {BaseTheme, ResponsiveValue, RNStyleProperty} from './types';
+import {getKeys} from './typeHelpers';
 
 const spacingProperties = {
   margin: true,
@@ -344,7 +345,9 @@ export type SpacingShorthandProps<Theme extends BaseTheme> = {
 
 export type TypographyProps<Theme extends BaseTheme> = {
   [Key in keyof typeof typographyProperties]?: ResponsiveValue<
-    Theme['typography'] extends object ? keyof Theme['typography'] : TextStyle[Key],
+    Theme['typography'] extends object
+      ? keyof Theme['typography']
+      : TextStyle[Key],
     Theme['breakpoints']
   >;
 };
@@ -410,7 +413,9 @@ export type ShadowProps<Theme extends BaseTheme> = {
 
 export type TextShadowProps<Theme extends BaseTheme> = {
   [Key in keyof typeof textShadowProperties]?: ResponsiveValue<
-    Theme['textShadows'] extends object ? keyof Theme['textShadows'] : TextStyle[Key],
+    Theme['textShadows'] extends object
+      ? keyof Theme['textShadows']
+      : TextStyle[Key],
     Theme['breakpoints']
   >;
 } & {

@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import {createTheme} from './restyle';
 
 const palette = {
@@ -21,10 +22,10 @@ export const theme = createTheme({
     l: 24,
     xl: 40,
   },
-  breakpoints: {
-    phone: 0,
-    tablet: 768,
-  },
+  // breakpoints: {
+  //   phone: 0,
+  //   tablet: 768,
+  // },
   textVariants: {
     defaults: {
       color: 'text',
@@ -50,6 +51,26 @@ export const theme = createTheme({
       backgroundColor: 'cardSecondaryBackground',
     },
   },
+
+  borderRadii: SpacingKeysNumber;
+  zIndices: ZIndicesKeys;
+  width: SpacingKeysString;
+  heights: SpacingKeysString;
+  borders: SpacingKeysString;
+  // variants:
+  // button
+  buttonStatusVariants: ButtonStatusVariantKeys;
+  buttonVariants: ButtonVariantKeys;
+  // textinput
+  textInputStatusVariants: TextInputStatusVariantKeys;
+  textInputVariants: TextInputVariantKeys;
+  // text, button
+  buttonTextVariants: ButtonTextVariantKeys;
+  textVariants: TextVariantKeys;
+  // view + button + touchable. (prefer button stuff if using a button.)
+  sizeVariants: SizeVariants;
+  viewVariants: ViewVariantKeys;
+  shadowVariants: ShadowVariantKeys;
 });
 
 export const darkTheme: Theme = {
